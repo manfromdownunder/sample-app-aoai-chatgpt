@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { SunRegular, MoonRegular } from '@fluentui/react-icons'
 
 import styles from './ThemeToggle.module.css'
 
@@ -45,11 +44,9 @@ const ThemeToggle = () => {
       aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
       title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
     >
-      {theme === 'light' ? (
-        <MoonRegular className={styles.themeIcon} />
-      ) : (
-        <SunRegular className={styles.themeIcon} />
-      )}
+      <span className={styles.themeIcon}>
+        {theme === 'light' ? '🌙' : '☀️'}
+      </span>
     </button>
   )
 }
