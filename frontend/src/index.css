@@ -1,3 +1,73 @@
+/* Theme Foundation - CSS Custom Properties */
+
+:root {
+  /* Primary Colors */
+  --bg-primary: #f2f2f2;
+  --bg-secondary: #ffffff;
+
+  /* Text Colors */
+  --text-primary: #323130;
+  --text-secondary: #242424;
+  --text-tertiary: #595959;
+
+  /* Border & Dividers */
+  --border-color: #d1d1d1;
+  --border-color-light: #e0e0e0;
+
+  /* Accent & Links */
+  --link-color: #115ea3;
+  --accent-color: #0078d4;
+
+  /* Component-Specific */
+  --code-bg: #2e3440;
+  --input-border: #ccc;
+  --button-bg: #f0f0f0;
+  --button-text: #323130;
+  --hover-bg: #f5f5f5;
+
+  /* Transitions */
+  --transition-fast: 150ms ease-in-out;
+  --transition-normal: 300ms ease-in-out;
+
+  /* Gradients */
+  --chat-bg-gradient: radial-gradient(108.78% 108.78% at 50.02% 19.78%, #ffffff 57.29%, #eef6fe 100%);
+  --user-msg-bg: #edf5fd;
+  --icon-color: #ffffff;
+}
+
+/* Dark Theme Overrides */
+[data-theme="dark"] {
+  --bg-primary: #1e1e1e;
+  --bg-secondary: #252526;
+  --text-primary: #cccccc;
+  --text-secondary: #ffffff;
+  --text-tertiary: #a0a0a0;
+  --border-color: #3e3e42;
+  --border-color-light: #2d2d30;
+  --link-color: #4fc3f7;
+  --accent-color: #0098ff;
+  --code-bg: #2e3440;
+  --input-border: #555;
+  --button-bg: #2d2d30;
+  --button-text: #cccccc;
+  --hover-bg: #3e3e42;
+  --chat-bg-gradient: radial-gradient(108.78% 108.78% at 50.02% 19.78%, #1e1e1e 57.29%, #2d2d35 100%);
+  --user-msg-bg: #2d3a4a;
+  --icon-color: #cccccc;
+}
+
+/* Apply to HTML */
+html {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
 * {
   box-sizing: border-box;
 }
