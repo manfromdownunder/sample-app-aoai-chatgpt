@@ -234,10 +234,52 @@ export const Answer = ({ answer, onCitationClicked, onExectResultClicked }: Prop
         language = match ? match[1] : undefined
       }
       const codeString = node.children[0].value ?? ''
+      const [copied, setCopied] = useState(false)
+
+      const handleCopy = async () => {
+        try {
+          await navigator.clipboard.writeText(codeString)
+          setCopied(true)
+          setTimeout(() => setCopied(false), 2000)
+        } catch (err) {
+          console.error('Failed to copy code:', err)
+        }
+      }
+
       return (
-        <SyntaxHighlighter style={nord} language={language} PreTag="div" {...props}>
-          {codeString}
-        </SyntaxHighlighter>
+        <div style={{ position: 'relative', marginBottom: '0.5rem' }}>
+          <button
+            onClick={handleCopy}
+            style={{
+              position: 'absolute',
+              top: '8px',
+              right: '8px',
+              padding: '6px 12px',
+              fontSize: '12px',
+              fontWeight: 500,
+              backgroundColor: '#444654',
+              color: '#ECECF1',
+              border: '1px solid #565869',
+              borderRadius: '4px',
+              cursor: 'pointer',
+              zIndex: 10,
+              transition: 'all 0.2s ease'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = '#565869'
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = '#444654'
+            }}
+            title="Copy code to clipboard"
+            aria-label="Copy code to clipboard"
+          >
+            {copied ? '✓ Copied!' : 'Copy'}
+          </button>
+          <SyntaxHighlighter style={nord} language={language} PreTag="div" {...props}>
+            {codeString}
+          </SyntaxHighlighter>
+        </div>
       )
     }
   }
