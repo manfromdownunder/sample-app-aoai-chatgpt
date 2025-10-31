@@ -15,14 +15,6 @@
   font-weight: 400;
 }
 
-.themeToggle:hover {
-  background-color: var(--hover-bg);
-}
-
-.themeToggle:active {
-  background-color: transparent;
-}
-
 .themeToggle:focus {
   outline: none;
 }
