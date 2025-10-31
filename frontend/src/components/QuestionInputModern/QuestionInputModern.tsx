@@ -96,17 +96,6 @@ export const QuestionInputModern = ({ onSend, disabled, placeholder, clearOnSend
       </div>
       <div className={styles.bottomRow}>
         {actionButtons && <div className={styles.actionButtonsContainer}>{actionButtons}</div>}
-        <button
-          className={styles.sendButton}
-          onClick={sendQuestion}
-          disabled={sendQuestionDisabled}
-          aria-label="Send message"
-          title="Send message (Ctrl+Enter)"
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <path d="M22 2L11 13m11-11l-7 20L5 13m0 0L2 5m3 8l14-4" strokeWidth="2" strokeLinecap="round" />
-          </svg>
-        </button>
       </div>
       {base64Image && (
         <div className={styles.imagePreview}>
