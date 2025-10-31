@@ -875,7 +875,7 @@ const Chat = () => {
                     )}
                     <label htmlFor="fileInputChat" style={{ cursor: 'pointer', padding: '8px 14px', border: '1px solid var(--border-color)', borderRadius: '25px', display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '14px', fontWeight: 400, color: 'var(--text-primary)', transition: 'all 0.15s ease', backgroundColor: 'var(--bg-secondary)' }} title="Attach image">
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M21.5 2a2.5 2.5 0 0 1 2.5 2.5v10A8.5 8.5 0 1 1 7.5 6V2.5A2.5 2.5 0 0 1 10 0a2.5 2.5 0 0 1 2.5 2.5v10a4 4 0 1 1-4-4V2.5" />
+                        <path d="M10.5 1.5H9C5.24 1.5 2.5 4.24 2.5 8V16C2.5 19.87 5.63 23 9.5 23C13.37 23 16.5 19.87 16.5 16V8C16.5 6.34 15.16 5 13.5 5C11.84 5 10.5 6.34 10.5 8V15" />
                       </svg>
                       Attach
                     </label>
