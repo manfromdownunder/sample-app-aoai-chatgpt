@@ -1,54 +1,51 @@
 .shareButtonRoot {
   padding: 8px 14px;
-  border-radius: 8px;
-  background: var(--accent-color);
-  border: none;
-  color: white;
-  font-weight: 500;
+  border-radius: 6px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.4;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.15s ease;
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  box-shadow: var(--shadow-sm);
 }
 
 .shareButtonRoot:hover {
-  background: #0052cc;
-  box-shadow: var(--shadow-md);
-  transform: translateY(-1px);
+  background: var(--hover-bg);
+  border-color: var(--accent-color);
 }
 
 .shareButtonRoot:active {
-  transform: translateY(0);
-  box-shadow: var(--shadow-sm);
+  background: var(--bg-secondary);
 }
 
 .historyButtonRoot {
   padding: 8px 12px;
-  border: 2px solid var(--indicator-color);
-  border-radius: 4px;
-  background: transparent;
-  color: var(--indicator-color);
-  font-weight: 600;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-weight: 400;
   font-size: 14px;
   line-height: 20px;
   cursor: pointer;
-  transition: all var(--transition-fast);
+  transition: all 0.15s ease;
   display: inline-flex;
   align-items: center;
   gap: 6px;
 }
 
 .historyButtonRoot:hover {
-  background: rgba(124, 58, 237, 0.1);
-  transform: translateY(-1px);
+  background: var(--hover-bg);
+  border-color: var(--accent-color);
 }
 
 .historyButtonRoot:active {
-  transform: translateY(0);
+  background: var(--bg-secondary);
 }
 
 @media (max-width: 480px) {

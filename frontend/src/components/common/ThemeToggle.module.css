@@ -5,27 +5,27 @@
   width: 36px;
   height: 36px;
   padding: 4px;
-  border: none;
-  border-radius: 8px;
-  background-color: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background-color: var(--bg-secondary);
   color: var(--text-primary);
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.15s ease;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .themeToggle:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-  transform: scale(1.05);
+  background-color: var(--hover-bg);
+  border-color: var(--accent-color);
 }
 
 .themeToggle:active {
-  transform: scale(0.95);
+  background-color: var(--bg-secondary);
 }
 
 .themeToggle:focus {
-  outline: 2px solid #0066cc;
+  outline: 2px solid var(--accent-color);
   outline-offset: 2px;
 }
 

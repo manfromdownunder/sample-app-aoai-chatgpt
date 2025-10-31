@@ -867,14 +867,14 @@ const Chat = () => {
                     disabled={disabledButton()}
                     aria-label="start a new chat button"
                     title="New chat"
-                    style={{ padding: '8px 14px', border: 'none', borderRadius: '8px', backgroundColor: '#0066cc', color: 'white', fontWeight: 500, fontSize: '14px', cursor: 'pointer', transition: 'all 0.2s ease', display: 'inline-flex', alignItems: 'center', gap: '6px', boxShadow: 'var(--shadow-sm)' }}
-                    onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#0052a3'; e.currentTarget.style.boxShadow = 'var(--shadow-md)'; }}
-                    onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = '#0066cc'; e.currentTarget.style.boxShadow = 'var(--shadow-sm)'; }}>
-                    ➕ New chat
+                    style={{ padding: '8px 14px', border: '1px solid var(--border-color)', borderRadius: '6px', backgroundColor: 'var(--bg-secondary)', color: 'var(--text-primary)', fontWeight: 400, fontSize: '14px', cursor: 'pointer', transition: 'all 0.15s ease', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
+                    onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = 'var(--hover-bg)'; }}
+                    onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'var(--bg-secondary)'; }}>
+                    + New chat
                   </button>
                 )}
-                <label htmlFor="fileInputChat" style={{ cursor: 'pointer', padding: '8px 14px', border: 'none', borderRadius: '8px', display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '14px', fontWeight: 500, color: 'white', transition: 'all 0.2s ease', backgroundColor: '#666', boxShadow: 'var(--shadow-sm)' }} title="Attach image" onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#555'; e.currentTarget.style.boxShadow = 'var(--shadow-md)'; }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = '#666'; e.currentTarget.style.boxShadow = 'var(--shadow-sm)'; }}>
-                  📎 Image
+                <label htmlFor="fileInputChat" style={{ cursor: 'pointer', padding: '8px 14px', border: '1px solid var(--border-color)', borderRadius: '6px', display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '14px', fontWeight: 400, color: 'var(--text-primary)', transition: 'all 0.15s ease', backgroundColor: 'var(--bg-secondary)' }} title="Attach image" onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = 'var(--hover-bg)'; }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'var(--bg-secondary)'; }}>
+                  📎
                 </label>
                 <input
                   type="file"
@@ -895,12 +895,12 @@ const Chat = () => {
                       ? 'Clear chat'
                       : 'New chat'
                   }
-                  style={{ padding: '8px 14px', border: 'none', borderRadius: '8px', backgroundColor: '#0066cc', color: 'white', fontWeight: 500, fontSize: '14px', cursor: 'pointer', transition: 'all 0.2s ease', display: 'inline-flex', alignItems: 'center', gap: '6px', boxShadow: 'var(--shadow-sm)' }}
-                  onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#0052a3'; e.currentTarget.style.boxShadow = 'var(--shadow-md)'; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = '#0066cc'; e.currentTarget.style.boxShadow = 'var(--shadow-sm)'; }}>
+                  style={{ padding: '8px 14px', border: '1px solid var(--border-color)', borderRadius: '6px', backgroundColor: 'var(--bg-secondary)', color: 'var(--text-primary)', fontWeight: 400, fontSize: '14px', cursor: 'pointer', transition: 'all 0.15s ease', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
+                  onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = 'var(--hover-bg)'; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'var(--bg-secondary)'; }}>
                   {appStateContext?.state.isCosmosDBAvailable?.status !== CosmosDBStatus.NotConfigured
                       ? 'Clear chat'
-                      : '➕ New chat'}
+                      : '+ New chat'}
                 </button>
                 <Dialog
                   hidden={hideErrorDialog}
