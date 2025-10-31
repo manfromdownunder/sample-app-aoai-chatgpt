@@ -139,16 +139,21 @@
 /* Light mode support */
 @media (prefers-color-scheme: light) {
   .container {
-    background: #f0f0f0;
+    background: #ffffff;
     border: 1px solid var(--border-color);
   }
 
   .textarea {
-    background: #f0f0f0;
+    background: #ffffff;
+    color: #0a0a0a;
+  }
+
+  .textarea::placeholder {
+    color: #666666;
   }
 
   .inputWrapper {
-    background: #f0f0f0;
+    background: #ffffff;
   }
 }
 
