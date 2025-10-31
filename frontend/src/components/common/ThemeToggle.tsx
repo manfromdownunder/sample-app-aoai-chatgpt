@@ -23,11 +23,7 @@ const ThemeToggle = () => {
   }, [])
 
   const applyTheme = (newTheme: 'light' | 'dark') => {
-    if (newTheme === 'dark') {
-      document.documentElement.setAttribute('data-theme', 'dark')
-    } else {
-      document.documentElement.removeAttribute('data-theme')
-    }
+    document.documentElement.setAttribute('data-theme', newTheme)
   }
 
   const toggleTheme = () => {
