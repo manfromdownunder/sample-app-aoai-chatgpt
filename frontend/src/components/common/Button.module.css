@@ -1,26 +1,29 @@
 .shareButtonRoot {
-  padding: 8px 12px;
-  border-radius: 4px;
+  padding: 8px 14px;
+  border-radius: 8px;
   background: var(--accent-color);
   border: none;
   color: white;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 1.4;
   cursor: pointer;
-  transition: all var(--transition-fast);
+  transition: all 0.2s ease;
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  box-shadow: var(--shadow-sm);
 }
 
 .shareButtonRoot:hover {
-  background: var(--link-color);
+  background: #0052cc;
+  box-shadow: var(--shadow-md);
   transform: translateY(-1px);
 }
 
 .shareButtonRoot:active {
   transform: translateY(0);
+  box-shadow: var(--shadow-sm);
 }
 
 .historyButtonRoot {

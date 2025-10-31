@@ -863,16 +863,18 @@ const Chat = () => {
               <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', alignItems: 'center' }}>
                 {appStateContext?.state.isCosmosDBAvailable?.status !== CosmosDBStatus.NotConfigured && (
                   <button
-                    className={styles.newChatIcon}
                     onClick={newChat}
                     disabled={disabledButton()}
                     aria-label="start a new chat button"
-                    title="New chat">
+                    title="New chat"
+                    style={{ padding: '8px 14px', border: 'none', borderRadius: '8px', backgroundColor: '#0066cc', color: 'white', fontWeight: 500, fontSize: '14px', cursor: 'pointer', transition: 'all 0.2s ease', display: 'inline-flex', alignItems: 'center', gap: '6px', boxShadow: 'var(--shadow-sm)' }}
+                    onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#0052a3'; e.currentTarget.style.boxShadow = 'var(--shadow-md)'; }}
+                    onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = '#0066cc'; e.currentTarget.style.boxShadow = 'var(--shadow-sm)'; }}>
                     ➕ New chat
                   </button>
                 )}
-                <label htmlFor="fileInputChat" style={{ cursor: 'pointer', padding: '8px 12px', border: '1px solid var(--border-color)', borderRadius: '6px', display: 'inline-flex', alignItems: 'center', fontSize: '14px', color: 'var(--text-primary)', transition: 'all 0.2s', backgroundColor: 'var(--button-bg)' }} title="Attach image">
-                  📎
+                <label htmlFor="fileInputChat" style={{ cursor: 'pointer', padding: '8px 14px', border: 'none', borderRadius: '8px', display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '14px', fontWeight: 500, color: 'white', transition: 'all 0.2s ease', backgroundColor: '#666', boxShadow: 'var(--shadow-sm)' }} title="Attach image" onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#555'; e.currentTarget.style.boxShadow = 'var(--shadow-md)'; }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = '#666'; e.currentTarget.style.boxShadow = 'var(--shadow-sm)'; }}>
+                  📎 Image
                 </label>
                 <input
                   type="file"
@@ -881,11 +883,6 @@ const Chat = () => {
                   accept="image/*"
                 />
                 <button
-                  className={
-                    appStateContext?.state.isCosmosDBAvailable?.status !== CosmosDBStatus.NotConfigured
-                      ? styles.clearChatBroom
-                      : styles.clearChatBroomNoCosmos
-                  }
                   onClick={
                     appStateContext?.state.isCosmosDBAvailable?.status !== CosmosDBStatus.NotConfigured
                       ? clearChat
@@ -897,10 +894,13 @@ const Chat = () => {
                     appStateContext?.state.isCosmosDBAvailable?.status !== CosmosDBStatus.NotConfigured
                       ? 'Clear chat'
                       : 'New chat'
-                  }>
-                  🗑️ {appStateContext?.state.isCosmosDBAvailable?.status !== CosmosDBStatus.NotConfigured
-                      ? 'Clear'
-                      : 'New'}
+                  }
+                  style={{ padding: '8px 14px', border: 'none', borderRadius: '8px', backgroundColor: '#0066cc', color: 'white', fontWeight: 500, fontSize: '14px', cursor: 'pointer', transition: 'all 0.2s ease', display: 'inline-flex', alignItems: 'center', gap: '6px', boxShadow: 'var(--shadow-sm)' }}
+                  onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#0052a3'; e.currentTarget.style.boxShadow = 'var(--shadow-md)'; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = '#0066cc'; e.currentTarget.style.boxShadow = 'var(--shadow-sm)'; }}>
+                  {appStateContext?.state.isCosmosDBAvailable?.status !== CosmosDBStatus.NotConfigured
+                      ? 'Clear chat'
+                      : '➕ New chat'}
                 </button>
                 <Dialog
                   hidden={hideErrorDialog}

@@ -32,6 +32,12 @@
   --transition-fast: 150ms ease-in-out;
   --transition-normal: 300ms ease-in-out;
 
+  /* Modern Shadows - Liquid Glass Effect */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 12px 32px rgba(0, 0, 0, 0.12);
+
   /* Gradients */
   --chat-bg-gradient: radial-gradient(108.78% 108.78% at 50.02% 19.78%, #ffffff 57.29%, #eef6fe 100%);
   --user-msg-bg: #edf5fd;
