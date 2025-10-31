@@ -116,18 +116,7 @@ export const QuestionInputModern = ({ onSend, disabled, placeholder, clearOnSend
           </button>
         </div>
       )}
-      {!OYD_ENABLED && (
-        <label htmlFor="fileInput" className={styles.fileLabel} title="Attach image">
-          📎
-        </label>
-      )}
-      <input
-        type="file"
-        id="fileInput"
-        onChange={handleImageUpload}
-        accept="image/*"
-        className={styles.fileInput}
-      />
+      {/* Image attachment is now in the chat header */}
     </div>
   )
 }

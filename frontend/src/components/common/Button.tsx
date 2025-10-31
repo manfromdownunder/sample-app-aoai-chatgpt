@@ -22,7 +22,7 @@ export const HistoryButton: React.FC<ButtonProps> = ({ onClick, text }) => {
       className={styles.historyButtonRoot}
       onClick={onClick}
       title={text}>
-      📜 {text}
+      {text}
     </button>
   )
 }

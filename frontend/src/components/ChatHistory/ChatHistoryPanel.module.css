@@ -1,6 +1,10 @@
 .container {
   max-height: calc(100vh - 100px);
   width: 300px;
+  flex-shrink: 0;
+  overflow-y: auto;
+  background: var(--bg-secondary);
+  border-left: 1px solid var(--border-color);
 }
 
 .listContainer {
@@ -22,7 +26,7 @@
 }
 
 .itemCell:hover {
-  background: #e6e6e6;
+  background: var(--hover-bg);
 }
 
 .itemButton {
@@ -31,15 +35,18 @@
   align-items: center;
   width: 28px;
   height: 28px;
-  border: 1px solid #d1d1d1;
+  border: 1px solid var(--border-color);
   border-radius: 5px;
-  background-color: white;
+  background-color: var(--button-bg);
+  color: var(--text-primary);
   margin: auto 2.5px;
   cursor: pointer;
+  transition: all 0.2s;
 }
 
 .itemButton:hover {
-  background-color: #e6e6e6;
+  background-color: var(--hover-bg);
+  border-color: var(--link-color);
 }
 
 .chatGroup {
@@ -72,8 +79,16 @@
   text-overflow: ellipsis;
 }
 
+@media (max-width: 768px) {
+  .container {
+    width: 250px;
+    max-height: calc(100vh - 140px);
+  }
+}
+
 @media (max-width: 480px) {
   .container {
-    width: 100%;
+    width: 200px;
+    max-height: calc(100vh - 140px);
   }
 }

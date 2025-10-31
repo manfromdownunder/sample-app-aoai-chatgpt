@@ -860,7 +860,7 @@ const Chat = () => {
                   <span className={styles.stopGeneratingText}>Stop generating</span>
                 </div>
               )}
-              <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+              <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', alignItems: 'center' }}>
                 {appStateContext?.state.isCosmosDBAvailable?.status !== CosmosDBStatus.NotConfigured && (
                   <button
                     className={styles.newChatIcon}
@@ -871,6 +871,15 @@ const Chat = () => {
                     ➕ New chat
                   </button>
                 )}
+                <label htmlFor="fileInputChat" style={{ cursor: 'pointer', padding: '8px 12px', border: '1px solid var(--border-color)', borderRadius: '6px', display: 'inline-flex', alignItems: 'center', fontSize: '14px', color: 'var(--text-primary)', transition: 'all 0.2s', backgroundColor: 'var(--button-bg)' }} title="Attach image">
+                  📎
+                </label>
+                <input
+                  type="file"
+                  id="fileInputChat"
+                  style={{ display: 'none' }}
+                  accept="image/*"
+                />
                 <button
                   className={
                     appStateContext?.state.isCosmosDBAvailable?.status !== CosmosDBStatus.NotConfigured

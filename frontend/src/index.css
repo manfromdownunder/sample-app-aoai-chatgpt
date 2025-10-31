@@ -19,6 +19,7 @@
   /* Accent & Links */
   --link-color: #115ea3;
   --accent-color: #0078d4;
+  --indicator-color: #7c3aed;
 
   /* Component-Specific */
   --code-bg: #2e3440;
@@ -71,6 +72,7 @@
   --border-color-light: #2d2d30;
   --link-color: #4fc3f7;
   --accent-color: #0098ff;
+  --indicator-color: #a78bfa;
   --code-bg: #2e3440;
   --input-border: #555;
   --button-bg: #2d2d30;
