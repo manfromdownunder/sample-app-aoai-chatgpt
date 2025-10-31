@@ -34,7 +34,7 @@ import {
   ExecResults,
 } from "../../api";
 import { Answer } from "../../components/Answer";
-import { QuestionInput } from "../../components/QuestionInput";
+import { QuestionInputModern } from "../../components/QuestionInputModern/QuestionInputModern";
 import { ChatHistoryPanel } from "../../components/ChatHistory/ChatHistoryPanel";
 import { AppStateContext } from "../../state/AppProvider";
 import { useBoolean } from "@fluentui/react-hooks";
@@ -931,7 +931,7 @@ const Chat = () => {
                   dialogContentProps={errorDialogContentProps}
                   modalProps={modalProps}></Dialog>
               </Stack>
-              <QuestionInput
+              <QuestionInputModern
                 clearOnSend
                 placeholder="Type a new question..."
                 disabled={isLoading}

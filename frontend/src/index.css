@@ -1,3 +1,5 @@
+/* Modern Theme - CSS Custom Properties inspired by Vaadin Lumo */
+
 /* Theme Foundation - CSS Custom Properties */
 
 :root {
@@ -33,6 +35,29 @@
   --chat-bg-gradient: radial-gradient(108.78% 108.78% at 50.02% 19.78%, #ffffff 57.29%, #eef6fe 100%);
   --user-msg-bg: #edf5fd;
   --icon-color: #ffffff;
+
+  /* Vaadin Lumo-compatible CSS Variables */
+  --lumo-primary-color: #0066cc;
+  --lumo-primary-color-dark: #0052a3;
+  --lumo-primary-color-50pct: rgba(0, 102, 204, 0.1);
+  --lumo-primary-contrast-color: #ffffff;
+  --lumo-base-color: #ffffff;
+  --lumo-body-text-color: #333333;
+  --lumo-secondary-text-color: #666666;
+  --lumo-disabled-text-color: #999999;
+  --lumo-contrast-10pct: #f0f0f0;
+  --lumo-contrast-20pct: #ddddd;
+  --lumo-border-radius: 4px;
+  --lumo-border-radius-m: 50%;
+  --lumo-transition: 0.2s;
+  --lumo-space-xs: 4px;
+  --lumo-space-s: 8px;
+  --lumo-space-m: 16px;
+  --lumo-space-l: 24px;
+  --lumo-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+  --lumo-font-size-s: 0.875rem;
+  --lumo-font-size-m: 1rem;
+  --lumo-font-size-l: 1.125rem;
 }
 
 /* Dark Theme Overrides */
@@ -54,6 +79,16 @@
   --chat-bg-gradient: radial-gradient(108.78% 108.78% at 50.02% 19.78%, #1e1e1e 57.29%, #2d2d35 100%);
   --user-msg-bg: #2d3a4a;
   --icon-color: #cccccc;
+
+  /* Lumo Dark Theme Variables */
+  --lumo-primary-color: #0066cc;
+  --lumo-primary-color-dark: #0052a3;
+  --lumo-primary-color-50pct: rgba(0, 102, 204, 0.2);
+  --lumo-base-color: #1a1a1a;
+  --lumo-body-text-color: #e0e0e0;
+  --lumo-secondary-text-color: #999999;
+  --lumo-contrast-10pct: #2a2a2a;
+  --lumo-contrast-20pct: #3a3a3a;
 }
 
 /* Apply to HTML */

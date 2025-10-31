@@ -1,0 +1,162 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--lumo-space-m, 16px);
+  padding: var(--lumo-space-m, 16px);
+  background: var(--lumo-base-color, #ffffff);
+  border-radius: var(--lumo-border-radius, 4px);
+}
+
+.inputWrapper {
+  display: flex;
+  gap: var(--lumo-space-s, 8px);
+  align-items: flex-end;
+  background: var(--lumo-contrast-10pct, #f0f0f0);
+  border: 1px solid var(--lumo-contrast-20pct, #ddd);
+  border-radius: var(--lumo-border-radius, 4px);
+  padding: var(--lumo-space-xs, 4px);
+  transition: all var(--lumo-transition, 0.2s);
+}
+
+.inputWrapper:focus-within {
+  border-color: var(--lumo-primary-color, #0066cc);
+  box-shadow: 0 0 0 2px var(--lumo-primary-color-50pct, rgba(0, 102, 204, 0.1));
+}
+
+.textarea {
+  flex: 1;
+  padding: var(--lumo-space-s, 8px) var(--lumo-space-m, 12px);
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--lumo-body-text-color, #333);
+  font-family: var(--lumo-font-family, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif);
+  font-size: var(--lumo-font-size-m, 1rem);
+  line-height: 1.5;
+  resize: none;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.textarea:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.textarea::placeholder {
+  color: var(--lumo-secondary-text-color, #666);
+}
+
+.sendButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: var(--lumo-space-xs, 4px);
+  background: var(--lumo-primary-color, #0066cc);
+  color: var(--lumo-primary-contrast-color, #ffffff);
+  border: none;
+  border-radius: var(--lumo-border-radius-m, 50%);
+  cursor: pointer;
+  font-size: 18px;
+  transition: all var(--lumo-transition, 0.2s);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.sendButton:hover:not(:disabled) {
+  background: var(--lumo-primary-color-dark, #0052a3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.sendButton:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.sendButton:disabled {
+  background: var(--lumo-contrast-20pct, #ddd);
+  color: var(--lumo-disabled-text-color, #999);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.imagePreview {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  border-radius: var(--lumo-border-radius, 4px);
+  overflow: hidden;
+}
+
+.imagePreview img {
+  max-width: 100%;
+  max-height: 200px;
+  border: 1px solid var(--lumo-contrast-20pct, #ddd);
+  border-radius: var(--lumo-border-radius, 4px);
+}
+
+.removeImage {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 28px;
+  height: 28px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.removeImage:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.fileInput {
+  display: none;
+}
+
+.fileLabel {
+  display: inline-block;
+  padding: var(--lumo-space-xs, 4px) var(--lumo-space-s, 8px);
+  background: var(--lumo-contrast-10pct, #f0f0f0);
+  color: var(--lumo-body-text-color, #333);
+  border: 1px solid var(--lumo-contrast-20pct, #ddd);
+  border-radius: var(--lumo-border-radius, 4px);
+  cursor: pointer;
+  font-size: var(--lumo-font-size-s, 0.875rem);
+  transition: all var(--lumo-transition, 0.2s);
+}
+
+.fileLabel:hover {
+  background: var(--lumo-contrast-20pct, #ddd);
+  border-color: var(--lumo-primary-color, #0066cc);
+}
+
+/* Dark mode support - automatically handled by Lumo */
+@media (prefers-color-scheme: dark) {
+  .container {
+    background: var(--lumo-base-color, #1a1a1a);
+  }
+
+  .inputWrapper {
+    background: var(--lumo-contrast-10pct, #2a2a2a);
+    border-color: var(--lumo-contrast-20pct, #3a3a3a);
+  }
+
+  .textarea {
+    color: var(--lumo-body-text-color, #e0e0e0);
+  }
+
+  .textarea::placeholder {
+    color: var(--lumo-secondary-text-color, #999);
+  }
+}
