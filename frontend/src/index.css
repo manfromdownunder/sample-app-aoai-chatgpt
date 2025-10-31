@@ -48,6 +48,16 @@
   --error-border: #d32f2f;
   --error-text: #ff9999;
 
+  /* Button Hover Colors - Dark Mode */
+  --new-chat-hover-text: #4ade80;
+  --new-chat-hover-border: #4ade80;
+  --attach-hover-text: #a855f7;
+  --attach-hover-border: #a855f7;
+  --clear-chat-hover-text: #ef4444;
+  --clear-chat-hover-border: #ef4444;
+  --chat-history-hover-text: #3b82f6;
+  --chat-history-hover-border: #3b82f6;
+
   /* Vaadin Lumo-compatible CSS Variables */
   --lumo-primary-color: #10a37f;
   --lumo-primary-color-dark: #10a37f;
@@ -98,6 +108,16 @@
   --error-border: #d32f2f;
   --error-text: #ff9999;
 
+  /* Button Hover Colors - Dark Mode */
+  --new-chat-hover-text: #4ade80;
+  --new-chat-hover-border: #4ade80;
+  --attach-hover-text: #a855f7;
+  --attach-hover-border: #a855f7;
+  --clear-chat-hover-text: #ef4444;
+  --clear-chat-hover-border: #ef4444;
+  --chat-history-hover-text: #3b82f6;
+  --chat-history-hover-border: #3b82f6;
+
   /* Lumo Dark Theme Variables */
   --lumo-primary-color: #0066cc;
   --lumo-primary-color-dark: #0052a3;
@@ -134,6 +154,16 @@
   --error-bg: #fee;
   --error-border: #d32f2f;
   --error-text: #c62828;
+
+  /* Button Hover Colors - Light Mode */
+  --new-chat-hover-text: #16a34a;
+  --new-chat-hover-border: #16a34a;
+  --attach-hover-text: #7c3aed;
+  --attach-hover-border: #7c3aed;
+  --clear-chat-hover-text: #dc2626;
+  --clear-chat-hover-border: #dc2626;
+  --chat-history-hover-text: #2563eb;
+  --chat-history-hover-border: #2563eb;
 
   /* Lumo Light Theme Variables */
   --lumo-primary-color: #10a37f;

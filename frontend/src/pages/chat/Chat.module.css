@@ -188,6 +188,91 @@
   top: auto !important;
 }
 
+/* Modern Action Buttons */
+.newChatButton {
+  padding: 8px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 25px;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.newChatButton:hover {
+  border-color: var(--new-chat-hover-border);
+  color: var(--new-chat-hover-text);
+}
+
+.attachButton {
+  cursor: pointer;
+  padding: 8px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 25px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-primary);
+  transition: all 0.15s ease;
+  background-color: var(--bg-secondary);
+}
+
+.attachButton:hover {
+  border-color: var(--attach-hover-border);
+  color: var(--attach-hover-text);
+}
+
+.attachButton:hover svg {
+  stroke: var(--attach-hover-text);
+}
+
+.clearChatButton {
+  padding: 8px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 25px;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.clearChatButton:hover {
+  border-color: var(--clear-chat-hover-border);
+  color: var(--clear-chat-hover-text);
+}
+
+.chatHistoryButton {
+  border: 1px solid var(--border-color);
+  border-radius: 25px;
+  padding: 8px 14px;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.chatHistoryButton:hover {
+  border-color: var(--chat-history-hover-border);
+  color: var(--chat-history-hover-text);
+}
+
 /* Stop generating button */
 .stopGeneratingContainer {
   position: absolute;
