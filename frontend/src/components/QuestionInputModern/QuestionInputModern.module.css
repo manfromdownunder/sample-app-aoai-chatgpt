@@ -34,8 +34,8 @@
   font-size: var(--lumo-font-size-m, 1rem);
   line-height: 1.5;
   resize: none;
-  max-height: 120px;
-  overflow-y: auto;
+  overflow: hidden;
+  min-height: 24px;
 }
 
 .textarea:disabled {
@@ -125,15 +125,18 @@
 }
 
 .fileLabel {
-  display: inline-block;
-  padding: var(--lumo-space-xs, 4px) var(--lumo-space-s, 8px);
-  background: var(--lumo-contrast-10pct, #f0f0f0);
-  color: var(--lumo-body-text-color, #333);
-  border: 1px solid var(--lumo-contrast-20pct, #ddd);
-  border-radius: var(--lumo-border-radius, 4px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
   cursor: pointer;
-  font-size: var(--lumo-font-size-s, 0.875rem);
+  font-size: 13px;
   transition: all var(--lumo-transition, 0.2s);
+  white-space: nowrap;
 }
 
 .fileLabel:hover {

@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import { useContext, useState, useRef, useEffect } from 'react'
 import { resizeImage } from '../../utils/resizeImage'
 import { ChatMessage } from '../../api'
 import { AppStateContext } from '../../state/AppProvider'
@@ -15,6 +15,19 @@ interface Props {
 export const QuestionInputModern = ({ onSend, disabled, placeholder, clearOnSend, conversationId }: Props) => {
   const [question, setQuestion] = useState<string>('')
   const [base64Image, setBase64Image] = useState<string | null>(null)
+  const textareaRef = useRef<HTMLTextAreaElement>(null)
+
+  const autoResizeTextarea = () => {
+    const textarea = textareaRef.current
+    if (textarea) {
+      textarea.style.height = 'auto'
+      textarea.style.height = Math.min(textarea.scrollHeight, 200) + 'px'
+    }
+  }
+
+  useEffect(() => {
+    autoResizeTextarea()
+  }, [question])
 
   const appStateContext = useContext(AppStateContext)
   const OYD_ENABLED = appStateContext?.state.frontendSettings?.oyd_enabled || false
@@ -70,13 +83,14 @@ export const QuestionInputModern = ({ onSend, disabled, placeholder, clearOnSend
     <div className={styles.container}>
       <div className={styles.inputWrapper}>
         <textarea
+          ref={textareaRef}
           className={styles.textarea}
           placeholder={placeholder || 'Type your question...'}
           value={question}
           onChange={(e) => setQuestion(e.target.value)}
           onKeyDown={onEnterPress}
           disabled={disabled}
-          rows={3}
+          rows={1}
         />
         <button
           className={styles.sendButton}
@@ -103,8 +117,8 @@ export const QuestionInputModern = ({ onSend, disabled, placeholder, clearOnSend
         </div>
       )}
       {!OYD_ENABLED && (
-        <label htmlFor="fileInput" className={styles.fileLabel}>
-          📎 Attach Image
+        <label htmlFor="fileInput" className={styles.fileLabel} title="Attach image">
+          📎
         </label>
       )}
       <input

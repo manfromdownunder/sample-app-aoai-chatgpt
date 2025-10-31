@@ -1,48 +1,62 @@
 .shareButtonRoot {
-  width: 86px;
-  height: 32px;
+  padding: 8px 12px;
   border-radius: 4px;
-  background: radial-gradient(109.81% 107.82% at 100.1% 90.19%, #0f6cbd 33.63%, #2d87c3 70.31%, #8dddd8 100%);
-  padding: 5px 12px;
-}
-
-.shareButtonRoot:hover {
-  background: linear-gradient(135deg, #0f6cbd 0%, #2d87c3 51.04%, #8dddd8 100%);
-}
-
-.shareButtonRoot span {
+  background: var(--accent-color);
+  border: none;
+  color: white;
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
-  color: #ffffff;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
-.shareButtonRoot i,
-.shareButtonRoot:hover i {
-  color: #ffffff !important;
+.shareButtonRoot:hover {
+  background: var(--link-color);
+  transform: translateY(-1px);
+}
+
+.shareButtonRoot:active {
+  transform: translateY(0);
 }
 
 .historyButtonRoot {
-  width: 180px;
-  border: 1px solid #d1d1d1;
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background: var(--button-bg);
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .historyButtonRoot:hover {
-  border: 1px solid #d1d1d1;
+  border-color: var(--link-color);
+  background: var(--hover-bg);
+  transform: translateY(-1px);
 }
 
 .historyButtonRoot:active {
-  border: 1px solid #d1d1d1;
+  transform: translateY(0);
 }
 
 @media (max-width: 480px) {
   .shareButtonRoot {
-    width: auto;
-    padding: 5px 8px;
+    padding: 6px 8px;
+    font-size: 12px;
   }
 
   .historyButtonRoot {
-    width: auto;
-    padding: 0 8px;
+    padding: 6px 8px;
+    font-size: 12px;
   }
 }

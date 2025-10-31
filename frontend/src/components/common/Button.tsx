@@ -1,30 +1,28 @@
-import { CommandBarButton, DefaultButton, IButtonProps } from '@fluentui/react'
-
 import styles from './Button.module.css'
 
-interface ButtonProps extends IButtonProps {
+interface ButtonProps {
   onClick: () => void
   text: string | undefined
 }
 
 export const ShareButton: React.FC<ButtonProps> = ({ onClick, text }) => {
   return (
-    <CommandBarButton
+    <button
       className={styles.shareButtonRoot}
-      iconProps={{ iconName: 'Share' }}
       onClick={onClick}
-      text={text}
-    />
+      title="Share">
+      🔗 {text}
+    </button>
   )
 }
 
 export const HistoryButton: React.FC<ButtonProps> = ({ onClick, text }) => {
   return (
-    <DefaultButton
+    <button
       className={styles.historyButtonRoot}
-      text={text}
-      iconProps={{ iconName: 'History' }}
       onClick={onClick}
-    />
+      title={text}>
+      📜 {text}
+    </button>
   )
 }
