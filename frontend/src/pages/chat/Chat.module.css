@@ -112,9 +112,9 @@
 .chatMessageError {
   padding: 16px;
   border-radius: 8px;
-  background: #fee;
-  border-left: 4px solid #d32f2f;
-  color: #c62828;
+  background: var(--error-bg);
+  border-left: 4px solid var(--error-border);
+  color: var(--error-text);
   font-size: 14px;
   line-height: 1.5;
   width: 100%;
@@ -392,10 +392,5 @@
 @media (prefers-color-scheme: dark) {
   .container {
     background: var(--bg-primary);
-  }
-
-  .chatMessageError {
-    background: #3a1a1a;
-    color: #ff9999;
   }
 }
