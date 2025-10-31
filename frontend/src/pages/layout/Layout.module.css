@@ -7,7 +7,7 @@
 .header {
   background-color: var(--bg-primary);
   border-bottom: 1px solid var(--bg-primary);
-  transition: background-color var(--transition-normal), color var(--transition-normal);
+  transition: background-color var(--transition-normal), color var(--transition-normal), border-color var(--transition-normal);
 }
 
 .headerContainer {
