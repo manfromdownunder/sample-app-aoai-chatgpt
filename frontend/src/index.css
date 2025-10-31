@@ -5,7 +5,7 @@
 :root {
   /* Primary Colors - Dark mode by default */
   --bg-primary: #212121;
-  --bg-secondary: #2f2f2f;
+  --bg-secondary: #303030;
 
   /* Text Colors */
   --text-primary: #ffffff;
@@ -70,7 +70,7 @@
 /* Dark Theme Overrides */
 [data-theme="dark"] {
   --bg-primary: #212121;
-  --bg-secondary: #2f2f2f;
+  --bg-secondary: #303030;
   --text-primary: #ffffff;
   --text-secondary: #ffffff;
   --text-tertiary: #8e8e8e;

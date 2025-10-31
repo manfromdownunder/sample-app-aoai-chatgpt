@@ -3,7 +3,7 @@
   flex-direction: column;
   gap: 8px;
   padding: 16px 20px;
-  background: #2f2f2f;
+  background: #303030;
   border-radius: 36px;
   width: 100%;
   max-width: 800px;
@@ -177,7 +177,7 @@
 /* Dark mode support - automatically handled by Lumo */
 @media (prefers-color-scheme: dark) {
   .container {
-    background: #2a2a2a;
+    background: #303030;
   }
 
   .inputWrapper {
