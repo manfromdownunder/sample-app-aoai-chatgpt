@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import styles from './ThemeToggle.module.css'
 
 const ThemeToggle = () => {
-  const [theme, setTheme] = useState<'light' | 'dark'>('light')
+  const [theme, setTheme] = useState<'light' | 'dark'>('dark')
 
   // Initialize theme from localStorage or system preference
   useEffect(() => {

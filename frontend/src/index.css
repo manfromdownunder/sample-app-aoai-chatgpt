@@ -3,30 +3,30 @@
 /* Theme Foundation - CSS Custom Properties */
 
 :root {
-  /* Primary Colors */
-  --bg-primary: #f2f2f2;
-  --bg-secondary: #ffffff;
+  /* Primary Colors - Dark mode by default */
+  --bg-primary: #1f1f1f;
+  --bg-secondary: #2f2f2f;
 
   /* Text Colors */
-  --text-primary: #323130;
-  --text-secondary: #242424;
-  --text-tertiary: #595959;
+  --text-primary: #ffffff;
+  --text-secondary: #ffffff;
+  --text-tertiary: #8e8e8e;
 
   /* Border & Dividers */
-  --border-color: #d1d1d1;
-  --border-color-light: #e0e0e0;
+  --border-color: #444444;
+  --border-color-light: #444444;
 
   /* Accent & Links */
-  --link-color: #115ea3;
-  --accent-color: #0078d4;
-  --indicator-color: #7c3aed;
+  --link-color: #10a37f;
+  --accent-color: #10a37f;
+  --indicator-color: #10a37f;
 
   /* Component-Specific */
   --code-bg: #2e3440;
-  --input-border: #ccc;
-  --button-bg: #f0f0f0;
-  --button-text: #323130;
-  --hover-bg: #f5f5f5;
+  --input-border: #444444;
+  --button-bg: #3e3e3e;
+  --button-text: #ffffff;
+  --hover-bg: #4a4a4a;
 
   /* Transitions */
   --transition-fast: 150ms ease-in-out;
@@ -39,21 +39,21 @@
   --shadow-xl: 0 12px 32px rgba(0, 0, 0, 0.12);
 
   /* Gradients */
-  --chat-bg-gradient: radial-gradient(108.78% 108.78% at 50.02% 19.78%, #ffffff 57.29%, #eef6fe 100%);
-  --user-msg-bg: #edf5fd;
+  --chat-bg-gradient: #1f1f1f;
+  --user-msg-bg: #1a1a1a;
   --icon-color: #ffffff;
 
   /* Vaadin Lumo-compatible CSS Variables */
-  --lumo-primary-color: #0066cc;
-  --lumo-primary-color-dark: #0052a3;
-  --lumo-primary-color-50pct: rgba(0, 102, 204, 0.1);
+  --lumo-primary-color: #10a37f;
+  --lumo-primary-color-dark: #10a37f;
+  --lumo-primary-color-50pct: rgba(16, 163, 127, 0.2);
   --lumo-primary-contrast-color: #ffffff;
-  --lumo-base-color: #ffffff;
-  --lumo-body-text-color: #333333;
-  --lumo-secondary-text-color: #666666;
-  --lumo-disabled-text-color: #999999;
-  --lumo-contrast-10pct: #f0f0f0;
-  --lumo-contrast-20pct: #ddddd;
+  --lumo-base-color: #1a1a1a;
+  --lumo-body-text-color: #ececf1;
+  --lumo-secondary-text-color: #d1d5db;
+  --lumo-disabled-text-color: #8b8b93;
+  --lumo-contrast-10pct: #2a2a2a;
+  --lumo-contrast-20pct: #3f3f3f;
   --lumo-border-radius: 4px;
   --lumo-border-radius-m: 50%;
   --lumo-transition: 0.2s;
@@ -69,24 +69,24 @@
 
 /* Dark Theme Overrides */
 [data-theme="dark"] {
-  --bg-primary: #1e1e1e;
-  --bg-secondary: #252526;
-  --text-primary: #cccccc;
+  --bg-primary: #1f1f1f;
+  --bg-secondary: #2f2f2f;
+  --text-primary: #ffffff;
   --text-secondary: #ffffff;
-  --text-tertiary: #a0a0a0;
-  --border-color: #3e3e42;
-  --border-color-light: #2d2d30;
-  --link-color: #4fc3f7;
-  --accent-color: #0098ff;
-  --indicator-color: #a78bfa;
+  --text-tertiary: #8e8e8e;
+  --border-color: #444444;
+  --border-color-light: #444444;
+  --link-color: #10a37f;
+  --accent-color: #10a37f;
+  --indicator-color: #10a37f;
   --code-bg: #2e3440;
-  --input-border: #555;
-  --button-bg: #2d2d30;
-  --button-text: #cccccc;
-  --hover-bg: #3e3e42;
-  --chat-bg-gradient: radial-gradient(108.78% 108.78% at 50.02% 19.78%, #1e1e1e 57.29%, #2d2d35 100%);
-  --user-msg-bg: #2d3a4a;
-  --icon-color: #cccccc;
+  --input-border: #444444;
+  --button-bg: #3e3e3e;
+  --button-text: #ffffff;
+  --hover-bg: #4a4a4a;
+  --chat-bg-gradient: #1f1f1f;
+  --user-msg-bg: #1a1a1a;
+  --icon-color: #ffffff;
 
   /* Lumo Dark Theme Variables */
   --lumo-primary-color: #0066cc;
@@ -123,7 +123,7 @@ body {
 }
 
 html {
-  background: #f2f2f2;
+  background: var(--bg-primary);
   font-family:
     'Segoe UI',
     'Segoe UI Web (West European)',

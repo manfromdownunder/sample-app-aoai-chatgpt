@@ -1,68 +1,67 @@
 .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 8px;
-  padding: 0;
-  background: transparent;
-  border-radius: 0;
+  padding: 16px 20px;
+  background: var(--bg-secondary);
+  border-radius: 24px;
+  width: 100%;
+  max-width: 800px;
+  box-sizing: border-box;
+  border: 1px solid var(--border-color);
+  align-items: center;
+  position: relative;
+  height: 60px;
 }
 
 .actionButtonsContainer {
   display: flex;
   gap: 8px;
-  padding: 12px 16px;
+  padding: 0;
   align-items: center;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  border-bottom: none;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  order: -1;
+  margin-right: 8px;
 }
 
 .inputWrapper {
   display: flex;
-  gap: var(--lumo-space-s, 8px);
-  align-items: flex-end;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  padding: 12px 16px;
+  gap: 8px;
+  align-items: center;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
   transition: all 0.15s ease;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-top: none;
+  flex: 1;
+  position: relative;
+  min-width: 0;
 }
 
-.container:has(.actionButtonsContainer) .inputWrapper {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-top: none;
-}
 
-.container:not(:has(.actionButtonsContainer)) .inputWrapper {
-  border-radius: 8px;
-  border-top: 1px solid var(--border-color);
-}
-
-.inputWrapper:focus-within {
+.container:focus-within {
   border-color: var(--accent-color);
   background: var(--bg-secondary);
 }
 
 .textarea {
   flex: 1;
-  padding: 8px 0;
+  padding: 0;
   border: none;
   outline: none;
   background: transparent;
-  color: var(--lumo-body-text-color, #333);
-  font-family: var(--lumo-font-family, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif);
-  font-size: var(--lumo-font-size-m, 1rem);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+  font-size: 16px;
   line-height: 1.5;
   resize: none;
   overflow: hidden;
-  min-height: 120px;
+  min-height: 28px;
+  max-height: 28px;
 }
 
 .textarea:disabled {
@@ -71,29 +70,30 @@
 }
 
 .textarea::placeholder {
-  color: var(--lumo-secondary-text-color, #666);
+  color: var(--text-tertiary);
 }
 
 .sendButton {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   padding: 0;
   background: transparent;
   color: var(--accent-color);
-  border: 1px solid var(--border-color);
+  border: none;
   border-radius: 6px;
   cursor: pointer;
   font-size: 18px;
   transition: all 0.15s ease;
   flex-shrink: 0;
+  margin-left: 8px;
 }
 
 .sendButton:hover:not(:disabled) {
-  background: var(--hover-bg);
-  border-color: var(--accent-color);
+  background: var(--button-bg);
+  color: var(--accent-color);
 }
 
 .sendButton:active:not(:disabled) {
@@ -101,10 +101,10 @@
 }
 
 .sendButton:disabled {
-  background: #e0e0e0;
-  color: #999;
+  background: transparent;
+  color: var(--text-tertiary);
   cursor: not-allowed;
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 .imagePreview {
@@ -164,8 +164,8 @@
 }
 
 .fileLabel:hover {
-  background: var(--lumo-contrast-20pct, #ddd);
-  border-color: var(--lumo-primary-color, #0066cc);
+  background: var(--hover-bg);
+  border-color: var(--accent-color);
 }
 
 /* Dark mode support - automatically handled by Lumo */
