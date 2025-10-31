@@ -136,12 +136,23 @@
   border-color: var(--accent-color);
 }
 
-/* Dark mode support - automatically handled by Lumo */
-@media (prefers-color-scheme: dark) {
+/* Light mode support */
+@media (prefers-color-scheme: light) {
   .container {
-    background: #303030;
+    background: #f0f0f0;
   }
 
+  .textarea {
+    background: #f0f0f0;
+  }
+
+  .inputWrapper {
+    background: #f0f0f0;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
   .textarea {
     color: var(--lumo-body-text-color, #e0e0e0);
   }
