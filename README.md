@@ -14,10 +14,11 @@ A modern web application that provides a ChatGPT-like interface powered by Azure
 ## Screenshots
 
 ### Dark Mode (Default)
-![Dark Mode Screenshot](./2025-10-31_15-41.png)
+<img width="1078" height="801" alt="image" src="https://github.com/user-attachments/assets/4cbf4f0f-6b23-404c-a314-13cf0df6b248" />
+
 
 ### Light Mode
-![Light Mode Screenshot](./2025-10-31_15-41_1.png)
+<img width="1083" height="794" alt="image" src="https://github.com/user-attachments/assets/d1da57d1-aacf-41cb-8853-e2f67e2b002e" />
 
 ## Architecture
 
