@@ -24,14 +24,14 @@
 }
 
 .historyButtonRoot {
-  padding: 8px 12px;
-  border: 2px solid var(--indicator-color);
-  border-radius: 6px;
-  background: transparent;
-  color: var(--indicator-color);
-  font-weight: 500;
+  padding: 8px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 25px;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-weight: 400;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 1.4;
   cursor: pointer;
   transition: all 0.15s ease;
   display: inline-flex;
@@ -40,12 +40,12 @@
 }
 
 .historyButtonRoot:hover {
-  background: rgba(124, 58, 237, 0.1);
-  border-color: var(--indicator-color);
+  background: var(--hover-bg);
+  border-color: var(--accent-color);
 }
 
 .historyButtonRoot:active {
-  background: transparent;
+  background: var(--bg-secondary);
 }
 
 @media (max-width: 480px) {
@@ -55,7 +55,7 @@
   }
 
   .historyButtonRoot {
-    padding: 6px 8px;
+    padding: 8px 14px;
     font-size: 12px;
   }
 }
