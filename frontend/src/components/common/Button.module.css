@@ -15,8 +15,8 @@
 }
 
 .shareButtonRoot:hover {
-  background: var(--hover-bg);
-  border-color: var(--accent-color);
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
 }
 
 .shareButtonRoot:active {
@@ -40,8 +40,8 @@
 }
 
 .historyButtonRoot:hover {
-  background: var(--hover-bg);
-  border-color: var(--accent-color);
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
 }
 
 .historyButtonRoot:active {

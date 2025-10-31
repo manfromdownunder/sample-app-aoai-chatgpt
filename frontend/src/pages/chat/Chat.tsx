@@ -869,15 +869,13 @@ const Chat = () => {
                         disabled={disabledButton()}
                         aria-label="start a new chat button"
                         title="New chat"
-                        style={{ padding: '8px 14px', border: '1px solid var(--border-color)', borderRadius: '25px', backgroundColor: 'var(--bg-secondary)', color: 'var(--text-primary)', fontWeight: 400, fontSize: '14px', cursor: 'pointer', transition: 'all 0.15s ease', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
-                        onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#e8e8e8'; }}
-                        onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'var(--bg-secondary)'; }}>
+                        style={{ padding: '8px 14px', border: '1px solid var(--border-color)', borderRadius: '25px', backgroundColor: 'var(--bg-secondary)', color: 'var(--text-primary)', fontWeight: 400, fontSize: '14px', cursor: 'pointer', transition: 'all 0.15s ease', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
                         + New chat
                       </button>
                     )}
-                    <label htmlFor="fileInputChat" style={{ cursor: 'pointer', padding: '8px 14px', border: '1px solid var(--border-color)', borderRadius: '25px', display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '14px', fontWeight: 400, color: 'var(--text-primary)', transition: 'all 0.15s ease', backgroundColor: 'var(--bg-secondary)' }} title="Attach image" onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#e8e8e8'; }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'var(--bg-secondary)'; }}>
+                    <label htmlFor="fileInputChat" style={{ cursor: 'pointer', padding: '8px 14px', border: '1px solid var(--border-color)', borderRadius: '25px', display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '14px', fontWeight: 400, color: 'var(--text-primary)', transition: 'all 0.15s ease', backgroundColor: 'var(--bg-secondary)' }} title="Attach image">
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M16 3.13a4 4 0 0 1 0 5.66l-8.62 8.62a2.5 2.5 0 1 1-3.54-3.54l8.62-8.62a1 1 0 0 1 1.41 1.41L4.25 14.27a.5.5 0 1 0 .71.71l8.62-8.62a2 2 0 0 1 2.83 2.83l-8.62 8.62" />
+                        <path d="m21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 2.2" />
                       </svg>
                       Attach
                     </label>
@@ -900,9 +898,7 @@ const Chat = () => {
                           ? 'Clear chat'
                           : 'New chat'
                       }
-                      style={{ padding: '8px 14px', border: '1px solid var(--border-color)', borderRadius: '25px', backgroundColor: 'var(--bg-secondary)', color: 'var(--text-primary)', fontWeight: 400, fontSize: '14px', cursor: 'pointer', transition: 'all 0.15s ease', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
-                      onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#e8e8e8'; }}
-                      onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'var(--bg-secondary)'; }}>
+                      style={{ padding: '8px 14px', border: '1px solid var(--border-color)', borderRadius: '25px', backgroundColor: 'var(--bg-secondary)', color: 'var(--text-primary)', fontWeight: 400, fontSize: '14px', cursor: 'pointer', transition: 'all 0.15s ease', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
                       {appStateContext?.state.isCosmosDBAvailable?.status !== CosmosDBStatus.NotConfigured
                           ? 'Clear chat'
                           : '+ New chat'}
