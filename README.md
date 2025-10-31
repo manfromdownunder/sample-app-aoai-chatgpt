@@ -11,6 +11,14 @@ A modern web application that provides a ChatGPT-like interface powered by Azure
 - **Citation Support**: Track and display sources for responses
 - **Azure Integration**: Works with Azure OpenAI, Cognitive Search, and CosmosDB
 
+## Screenshots
+
+### Dark Mode (Default)
+![Dark Mode Screenshot](./2025-10-31_15-41.png)
+
+### Light Mode
+![Light Mode Screenshot](./2025-10-31_15-41_1.png)
+
 ## Architecture
 
 - **Frontend**: React + TypeScript + Vite
