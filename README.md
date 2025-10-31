@@ -18,6 +18,11 @@ A modern web application that provides a ChatGPT-like interface powered by Azure
 - **Styling**: CSS3 with CSS variables for theming
 - **Optional Services**: Azure OpenAI, Azure CosmosDB, Azure Cognitive Search
 
+<img width="1086" height="771" alt="image" src="https://github.com/user-attachments/assets/d5418c7a-0ee1-4ce6-aa94-8b6b192e6389" />
+<img width="1080" height="780" alt="image" src="https://github.com/user-attachments/assets/5bad4033-7d8a-46c6-8d44-bfe65abebcd8" />
+
+
+
 ## Quick Start
 
 ### Prerequisites
