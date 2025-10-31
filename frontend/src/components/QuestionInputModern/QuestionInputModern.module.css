@@ -142,11 +142,6 @@
     background: #303030;
   }
 
-  .inputWrapper {
-    background: var(--lumo-contrast-10pct, #2a2a2a);
-    border-color: var(--lumo-contrast-20pct, #3a3a3a);
-  }
-
   .textarea {
     color: var(--lumo-body-text-color, #e0e0e0);
   }
