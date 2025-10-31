@@ -1,10 +1,23 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: var(--lumo-space-m, 16px);
-  padding: var(--lumo-space-m, 16px);
-  background: var(--lumo-base-color, #ffffff);
-  border-radius: var(--lumo-border-radius, 4px);
+  gap: 8px;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+}
+
+.actionButtonsContainer {
+  display: flex;
+  gap: 8px;
+  padding: 12px 16px;
+  align-items: center;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  border-bottom: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .inputWrapper {
@@ -16,6 +29,20 @@
   border-radius: 8px;
   padding: 12px 16px;
   transition: all 0.15s ease;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: none;
+}
+
+.container:has(.actionButtonsContainer) .inputWrapper {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: none;
+}
+
+.container:not(:has(.actionButtonsContainer)) .inputWrapper {
+  border-radius: 8px;
+  border-top: 1px solid var(--border-color);
 }
 
 .inputWrapper:focus-within {

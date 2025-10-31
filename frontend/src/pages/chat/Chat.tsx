@@ -860,55 +860,52 @@ const Chat = () => {
                   <span className={styles.stopGeneratingText}>Stop generating</span>
                 </div>
               )}
-              <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', alignItems: 'center' }}>
-                {appStateContext?.state.isCosmosDBAvailable?.status !== CosmosDBStatus.NotConfigured && (
-                  <button
-                    onClick={newChat}
-                    disabled={disabledButton()}
-                    aria-label="start a new chat button"
-                    title="New chat"
-                    style={{ padding: '8px 14px', border: '1px solid var(--border-color)', borderRadius: '6px', backgroundColor: 'var(--bg-secondary)', color: 'var(--text-primary)', fontWeight: 400, fontSize: '14px', cursor: 'pointer', transition: 'all 0.15s ease', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
-                    onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = 'var(--hover-bg)'; }}
-                    onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'var(--bg-secondary)'; }}>
-                    + New chat
-                  </button>
-                )}
-                <label htmlFor="fileInputChat" style={{ cursor: 'pointer', padding: '8px 14px', border: '1px solid var(--border-color)', borderRadius: '6px', display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '14px', fontWeight: 400, color: 'var(--text-primary)', transition: 'all 0.15s ease', backgroundColor: 'var(--bg-secondary)' }} title="Attach image" onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = 'var(--hover-bg)'; }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'var(--bg-secondary)'; }}>
-                  📎
-                </label>
-                <input
-                  type="file"
-                  id="fileInputChat"
-                  style={{ display: 'none' }}
-                  accept="image/*"
-                />
-                <button
-                  onClick={
-                    appStateContext?.state.isCosmosDBAvailable?.status !== CosmosDBStatus.NotConfigured
-                      ? clearChat
-                      : newChat
-                  }
-                  disabled={disabledButton()}
-                  aria-label="clear chat button"
-                  title={
-                    appStateContext?.state.isCosmosDBAvailable?.status !== CosmosDBStatus.NotConfigured
-                      ? 'Clear chat'
-                      : 'New chat'
-                  }
-                  style={{ padding: '8px 14px', border: '1px solid var(--border-color)', borderRadius: '6px', backgroundColor: 'var(--bg-secondary)', color: 'var(--text-primary)', fontWeight: 400, fontSize: '14px', cursor: 'pointer', transition: 'all 0.15s ease', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
-                  onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = 'var(--hover-bg)'; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'var(--bg-secondary)'; }}>
-                  {appStateContext?.state.isCosmosDBAvailable?.status !== CosmosDBStatus.NotConfigured
-                      ? 'Clear chat'
-                      : '+ New chat'}
-                </button>
-                <Dialog
-                  hidden={hideErrorDialog}
-                  onDismiss={handleErrorDialogClose}
-                  dialogContentProps={errorDialogContentProps}
-                  modalProps={modalProps}></Dialog>
-              </div>
               <QuestionInputModern
+                actionButtons={
+                  <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+                    {appStateContext?.state.isCosmosDBAvailable?.status !== CosmosDBStatus.NotConfigured && (
+                      <button
+                        onClick={newChat}
+                        disabled={disabledButton()}
+                        aria-label="start a new chat button"
+                        title="New chat"
+                        style={{ padding: '8px 14px', border: '1px solid var(--border-color)', borderRadius: '8px', backgroundColor: 'var(--bg-secondary)', color: 'var(--text-primary)', fontWeight: 400, fontSize: '14px', cursor: 'pointer', transition: 'all 0.15s ease', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
+                        onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#e8e8e8'; }}
+                        onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'var(--bg-secondary)'; }}>
+                        + New chat
+                      </button>
+                    )}
+                    <label htmlFor="fileInputChat" style={{ cursor: 'pointer', padding: '8px 14px', border: '1px solid var(--border-color)', borderRadius: '8px', display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '14px', fontWeight: 400, color: 'var(--text-primary)', transition: 'all 0.15s ease', backgroundColor: 'var(--bg-secondary)' }} title="Attach image" onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#e8e8e8'; }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'var(--bg-secondary)'; }}>
+                      📎
+                    </label>
+                    <input
+                      type="file"
+                      id="fileInputChat"
+                      style={{ display: 'none' }}
+                      accept="image/*"
+                    />
+                    <button
+                      onClick={
+                        appStateContext?.state.isCosmosDBAvailable?.status !== CosmosDBStatus.NotConfigured
+                          ? clearChat
+                          : newChat
+                      }
+                      disabled={disabledButton()}
+                      aria-label="clear chat button"
+                      title={
+                        appStateContext?.state.isCosmosDBAvailable?.status !== CosmosDBStatus.NotConfigured
+                          ? 'Clear chat'
+                          : 'New chat'
+                      }
+                      style={{ padding: '8px 14px', border: '1px solid var(--border-color)', borderRadius: '8px', backgroundColor: 'var(--bg-secondary)', color: 'var(--text-primary)', fontWeight: 400, fontSize: '14px', cursor: 'pointer', transition: 'all 0.15s ease', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
+                      onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#e8e8e8'; }}
+                      onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'var(--bg-secondary)'; }}>
+                      {appStateContext?.state.isCosmosDBAvailable?.status !== CosmosDBStatus.NotConfigured
+                          ? 'Clear chat'
+                          : '+ New chat'}
+                    </button>
+                  </div>
+                }
                 clearOnSend
                 placeholder="Type a new question..."
                 disabled={isLoading}

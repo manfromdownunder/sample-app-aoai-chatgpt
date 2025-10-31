@@ -10,9 +10,10 @@ interface Props {
   placeholder?: string
   clearOnSend?: boolean
   conversationId?: string
+  actionButtons?: React.ReactNode
 }
 
-export const QuestionInputModern = ({ onSend, disabled, placeholder, clearOnSend, conversationId }: Props) => {
+export const QuestionInputModern = ({ onSend, disabled, placeholder, clearOnSend, conversationId, actionButtons }: Props) => {
   const [question, setQuestion] = useState<string>('')
   const [base64Image, setBase64Image] = useState<string | null>(null)
   const textareaRef = useRef<HTMLTextAreaElement>(null)
@@ -81,6 +82,7 @@ export const QuestionInputModern = ({ onSend, disabled, placeholder, clearOnSend
 
   return (
     <div className={styles.container}>
+      {actionButtons && <div className={styles.actionButtonsContainer}>{actionButtons}</div>}
       <div className={styles.inputWrapper}>
         <textarea
           ref={textareaRef}
@@ -116,7 +118,6 @@ export const QuestionInputModern = ({ onSend, disabled, placeholder, clearOnSend
           </button>
         </div>
       )}
-      {/* Image attachment is now in the chat header */}
     </div>
   )
 }
