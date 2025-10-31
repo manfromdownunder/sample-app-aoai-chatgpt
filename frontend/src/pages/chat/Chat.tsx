@@ -876,7 +876,10 @@ const Chat = () => {
                       </button>
                     )}
                     <label htmlFor="fileInputChat" style={{ cursor: 'pointer', padding: '8px 14px', border: '1px solid var(--border-color)', borderRadius: '25px', display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '14px', fontWeight: 400, color: 'var(--text-primary)', transition: 'all 0.15s ease', backgroundColor: 'var(--bg-secondary)' }} title="Attach image" onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#e8e8e8'; }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'var(--bg-secondary)'; }}>
-                      📎
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M16 3.13a4 4 0 0 1 0 5.66l-8.62 8.62a2.5 2.5 0 1 1-3.54-3.54l8.62-8.62a1 1 0 0 1 1.41 1.41L4.25 14.27a.5.5 0 1 0 .71.71l8.62-8.62a2 2 0 0 1 2.83 2.83l-8.62 8.62" />
+                      </svg>
+                      Attach
                     </label>
                     <input
                       type="file"
