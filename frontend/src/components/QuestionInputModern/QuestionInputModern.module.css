@@ -156,7 +156,9 @@
 @media (prefers-color-scheme: dark) {
   .inputWrapper {
     background: #303030;
-    border: none;
+    border: none !important;
+    border-color: transparent !important;
+    border-bottom: none !important;
   }
 
   .textarea {
