@@ -82,7 +82,6 @@ export const QuestionInputModern = ({ onSend, disabled, placeholder, clearOnSend
 
   return (
     <div className={styles.container}>
-      {actionButtons && <div className={styles.actionButtonsContainer}>{actionButtons}</div>}
       <div className={styles.inputWrapper}>
         <textarea
           ref={textareaRef}
@@ -94,6 +93,9 @@ export const QuestionInputModern = ({ onSend, disabled, placeholder, clearOnSend
           disabled={disabled}
           rows={1}
         />
+      </div>
+      <div className={styles.bottomRow}>
+        {actionButtons && <div className={styles.actionButtonsContainer}>{actionButtons}</div>}
         <button
           className={styles.sendButton}
           onClick={sendQuestion}
